@@ -1,10 +1,10 @@
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
 const fs = require('fs');
-const config = require('./config.json'); // <--- Usando config.json
 
-const TOKEN = config.TOKEN;
-const CLIENT_ID = config.CLIENT_ID;
-const GUILD_ID = config.GUILD_ID;
+// Usa variables de entorno (Heroku)
+const TOKEN = process.env.TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
+const GUILD_ID = process.env.GUILD_ID;
 
 const DATA_FILE = './tiempos.json';
 
